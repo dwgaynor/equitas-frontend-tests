@@ -1,3 +1,65 @@
 .App {
   text-align: center;
 }
+#root, #root > div{
+  height: 100%;
+}
+.logo{
+  width: 20%;
+  background-color: white;
+  padding-left: 1.5%;
+  margin-bottom: -4px;/*fix for inline block whitespace bug*/
+}
+div.main{
+  background-color: white;
+  height: 100%;
+  padding: 0;
+}
+  div.banner{
+    width: 100%;
+    background-color: #005288;
+    vertical-align: middle;
+    position: relative;
+  }
+    div.banner > div{
+      position: absolute;
+      top: 45%;
+      right: 0;
+    }
+      p.totalLaunches{
+        margin: 0 16px 0 0;
+        font-size: larger;
+        color: white; 
+      }
+  div.content{
+    padding: 0 16px;
+    margin-top: 16px;
+    background-color: white;
+  }
+    div.MuiGrid-root.MuiGrid-item{
+      display: inline-block;
+      width: 33%;
+      min-width: 350px;
+    }
+      div.MuiPaper-root{
+        background-color: #005288;
+        color: white;
+        border-radius: 5%;
+      }
+    div.content > h4{
+      display: inline-block;
+      margin: 16px 0;
+    }
+    div.content button{
+      margin-left: 18px;
+      color: #005288;
+      border-color: #005288;
+    }
+      div.content button:hover{
+        color: white;
+        background-color: #005288;
+      }
+      div.content button:disabled{
+        color: #A7A9AC;
+        border-color: #A7A9AC;
+      }

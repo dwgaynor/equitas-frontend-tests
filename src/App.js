@@ -127,21 +127,25 @@ function App() {
     return (
         <div>
 
-            <Container>
-                <p>Total Launches: {data["totalDocs"]}</p>
+            <Container className="main">
+                <div className="banner">
+                    <a href="https://www.youtube.com/spacex" target='blank'>
+                        <img src="https://1000logos.net/wp-content/uploads/2020/09/SpaceX-Logo.jpg" alt="SpaceX Logo" className="spacex logo" />
+                    </a>
+                    <div><p className="totalLaunches">Total Launches: {data["totalDocs"]}</p></div>
+                </div>
                 {data["docs"] ? (
-                    <div>
+                    <div className="content">
                         <Launches launches={data["docs"]}/>
-                        <p>Page {data["page"]} / {data["totalPages"]} </p>
+                        <h4>Page {data["page"]} / {data["totalPages"]} </h4>
                         <Button variant="outlined" onClick={prevPage} disabled={currentPage === 1}>Prev Page</Button>
                         <Button variant="outlined" onClick={nextPage} disabled={currentPage === data["totalPages"]}>Next
-                           Page</Button>
+                        Page</Button>
 
-                   </div>
+                </div>
                 ) : (
-                    <div>Loading...</div>
+                    <div className="content">Loading...</div>
                 )}
-
             </Container>
 
         </div>

@@ -3,3 +3,20 @@
     font-weight: bold;
     font-size: large;
 }
+.tile{
+    height: 100%;
+}
+.youtube img{
+    width: 25%;
+    margin: 12px auto;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5%;
+}
+.launchDate h4{
+    margin: 4px 0;
+    text-decoration: underline;
+}
+.launchDate p{
+    margin: 0;
+}
